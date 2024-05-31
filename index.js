@@ -1,6 +1,8 @@
 'use strict';
 
-var acorn = require('acorn');
+var { Parser } = require('acorn');
+var stage3Plugin = require('acorn-stage3');
+var acorn = Parser.extend(stage3Plugin);
 var escope = require('escope');
 
 var requireRegexp = /\brequire\b/;

@@ -1,13 +1,13 @@
 {
   "name": "derequire",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "remove requires",
   "main": "index.js",
   "bin": {
     "derequire": "bin/cmd.js"
   },
   "scripts": {
-    "test": "istanbul test _mocha test/test.js",
+    "test": "nyc mocha test/test.js",
     "perf": "node test/perf.js"
   },
   "files": [
@@ -27,15 +27,16 @@
   },
   "homepage": "https://github.com/calvinmetcalf/derequire",
   "dependencies": {
-    "acorn": "^7.1.1",
-    "concat-stream": "^1.4.6",
-    "escope": "^3.6.0",
-    "through2": "^2.0.0",
-    "yargs": "^15.3.1"
+    "acorn": "^8.11.3",
+    "acorn-stage3": "^4.0.0",
+    "concat-stream": "^2.0.0",
+    "escope": "^4.0.0",
+    "through2": "^4.0.2",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
-    "istanbul": "^0.4.5",
-    "mocha": "^7.2.0"
+    "mocha": "^10.4.0",
+    "nyc": "^15.1.0"
   }
 }
