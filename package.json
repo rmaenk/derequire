@@ -1,5 +1,5 @@
 {
-  "name": "derequire",
+  "name": "@rmaenk/derequire",
   "version": "3.0.0",
   "description": "remove requires",
   "main": "index.js",
@@ -18,14 +18,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/calvinmetcalf/derequire.git"
+    "url": "git+https://github.com/rmaenk/derequire.git"
   },
-  "author": "Calvin Metcalf",
+  "author": "Roman Melnik",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/calvinmetcalf/derequire/issues"
+    "url": "https://github.com/rmaenk/derequire/issues"
   },
-  "homepage": "https://github.com/calvinmetcalf/derequire",
+  "homepage": "https://github.com/rmaenk/derequire",
   "dependencies": {
     "acorn": "^8.11.3",
     "acorn-stage3": "^4.0.0",
@@ -38,5 +38,8 @@
     "browserify": "^13.1.1",
     "mocha": "^10.4.0",
     "nyc": "^15.1.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
