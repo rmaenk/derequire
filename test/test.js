@@ -116,6 +116,38 @@ describe('derequire', function(){
     assert.equal(derequire(source), expected);
   });
 
+  it('should not fail on logical assigment ||=', function() {
+    var source = (
+      'var x=function(require,module,exports){' +
+        'var process=undefined;' +
+        'process||=require("__browserify_process");' +
+      '}'
+    );
+    var expected = (
+      'var x=function(_dereq_,module,exports){' +
+        'var process=undefined;' +
+        'process||=_dereq_("__browserify_process");' +
+      '}'
+    );
+    assert.equal(derequire(source), expected);
+  });
+
+  it('should not fail on logical assigment &&=', function() {
+    var source = (
+      'var x=function(require,module,exports){' +
+        'var process={};' +
+        'process&&=require("__browserify_process");' +
+      '}'
+    );
+    var expected = (
+      'var x=function(_dereq_,module,exports){' +
+        'var process={};' +
+        'process&&=_dereq_("__browserify_process");' +
+      '}'
+    );
+    assert.equal(derequire(source), expected);
+  });
+
   it('should work on something big', function(done) {
     fs.readFile('./test/pouchdb.js', 'utf8', function(err, source) {
       fs.readFile('./test/pouchdb.dereq.js', 'utf8', function(err, expected) {

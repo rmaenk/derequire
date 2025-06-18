@@ -1,6 +1,6 @@
 {
   "name": "@rmaenk/derequire",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "remove requires",
   "main": "index.js",
   "bin": {
@@ -27,17 +27,18 @@
   },
   "homepage": "https://github.com/rmaenk/derequire",
   "dependencies": {
-    "acorn": "^8.11.3",
+    "acorn": "^8.15.0",
     "acorn-stage3": "^4.0.0",
+    "acorn-logical-assignment": "^0.1.4",
     "concat-stream": "^2.0.0",
     "escope": "^4.0.0",
     "through2": "^4.0.2",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "browserify": "^13.1.1",
-    "mocha": "^10.4.0",
-    "nyc": "^15.1.0"
+    "browserify": "^17.0.1",
+    "mocha": "^11.7.0",
+    "nyc": "^17.1.0"
   },
   "directories": {
     "test": "test"
